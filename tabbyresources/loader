@@ -64,7 +64,7 @@ local cstore = {
     FeedBackDebounce = false,
     CurrentFeedbackValue = "",
     CurrentFeedbackDiscordUser = "None",
-    VersionExecuted = game:HttpGet("https://raw.githubusercontent.com/railme37509124/Tabby/main/TabbyPassedKey.lua", true),
+    VersionExecuted = game:HttpGet("https://raw.githubusercontent.com/archedkk/loadstringscripts/main/tabbyresources/loader", true),
     Outdated = false,
     WalkSpeed = 24,
     JumpPower = 70,
@@ -537,8 +537,8 @@ end)
 
 task.spawn(function()
     repeat
-        if cstore.VersionExecuted ~= game:HttpGet("https://raw.githubusercontent.com/railme37509124/Tabby/main/TabbyPassedKey.lua", true) then
-            cstore.VersionExecuted = game:HttpGet("https://raw.githubusercontent.com/railme37509124/Tabby/main/TabbyPassedKey.lua", true)
+        if cstore.VersionExecuted ~= game:HttpGet("https://raw.githubusercontent.com/archedkk/loadstringscripts/main/tabbyresources/loader", true) then
+            cstore.VersionExecuted = game:HttpGet("https://raw.githubusercontent.com/archedkk/loadstringscripts/main/tabbyresources/loader", true)
             game.StarterGui:SetCore("SendNotification", {
                 Title = "New Version"; 
                 Text = "A new version of tabby is available";
