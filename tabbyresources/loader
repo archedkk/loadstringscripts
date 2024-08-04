@@ -98,7 +98,7 @@ local functionstore = {
         py.Transparency = 1
         Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(py.Position + Vector3.new(0, 9, 0))
         Players.LocalPlayer.Character.Humanoid:MoveTo(fieldstore[cstore.SelectedField].Position)
-        Players.LocalPlayer.Character.Humanoid:MoveTo.MoveToFinished:Wait()
+        Players.LocalPlayer.Character.Humanoid.MoveToFinished:Wait()
         if Workspace:FindFirstChild("ckkk68") then
             Workspace.ckkk68:Destroy()
         end
@@ -419,7 +419,7 @@ task.spawn(function()
                             p.Transparency = 1
                             Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(p.Position + Vector3.new(0, 9, 0))
                             Players.LocalPlayer.Character.Humanoid:MoveTo(functionstore.GetHivePosition())
-                            Players.LocalPlayer.Character.Humanoid:MoveTo.MoveToFinished:Wait()
+                            Players.LocalPlayer.Character.Humanoid.MoveToFinished:Wait()
                             p = 0
                             Workspace:FindFirstChild("ckkk67"):Destroy()
                             wait(3)
@@ -458,7 +458,7 @@ task.spawn(function()
                 if token then
                     cstore.GettingToken = true
                     Players.LocalPlayer.Character.Humanoid:MoveTo(token.Position)
-                    Players.LocalPlayer.Character.Humanoid:MoveTo.MoveToFinished:Wait()
+                    Players.LocalPlayer.Character.Humanoid.MoveToFinished:Wait()
                     cstore.GettingToken = false
                 end
             end
