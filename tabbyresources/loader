@@ -97,10 +97,8 @@ local functionstore = {
         py.Anchored = true
         py.Transparency = 1
         Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(py.Position + Vector3.new(0, 9, 0))
-        repeat
-            Players.LocalPlayer.Character.Humanoid:MoveTo(fieldstore[cstore.SelectedField].Position)
-            task.wait(1)
-        until (((fieldstore[cstore.SelectedField].Position * Vector3.new(1, 0, 1)) - (Players.LocalPlayer.Character.HumanoidRootPart.Position * Vector3.new(1, 0, 1))).magnitude < 15) or not togglestore.AutoFarm
+        Players.LocalPlayer.Character.Humanoid:MoveTo(fieldstore[cstore.SelectedField].Position)
+        Players.LocalPlayer.Character.Humanoid:MoveTo.MoveToFinished:Wait()
         if Workspace:FindFirstChild("ckkk68") then
             Workspace.ckkk68:Destroy()
         end
@@ -420,10 +418,8 @@ task.spawn(function()
                             p.Anchored = true
                             p.Transparency = 1
                             Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(p.Position + Vector3.new(0, 9, 0))
-                            repeat
-                                Players.LocalPlayer.Character.Humanoid:MoveTo(functionstore.GetHivePosition())
-                                task.wait(1)
-                            until (((functionstore.GetHivePosition() * Vector3.new(1, 0, 1)) - (Players.LocalPlayer.Character.HumanoidRootPart.Position * Vector3.new(1, 0, 1))).magnitude < 15) or not togglestore.AutoConvert
+                            Players.LocalPlayer.Character.Humanoid:MoveTo(functionstore.GetHivePosition())
+                            Players.LocalPlayer.Character.Humanoid:MoveTo.MoveToFinished:Wait()
                             p = 0
                             Workspace:FindFirstChild("ckkk67"):Destroy()
                             wait(3)
@@ -462,7 +458,7 @@ task.spawn(function()
                 if token then
                     cstore.GettingToken = true
                     Players.LocalPlayer.Character.Humanoid:MoveTo(token.Position)
-                    task.wait(0.31)
+                    Players.LocalPlayer.Character.Humanoid:MoveTo.MoveToFinished:Wait()
                     cstore.GettingToken = false
                 end
             end
