@@ -1,3 +1,4 @@
+return(function(ttt)
 --[[
 
             $$\                       $$\   
@@ -10,7 +11,7 @@
              \____/       \_/       \______|                            
                           
 ]]
-if not getgenv().ama12ts then game.Players.LocalPlayer:Kick("Key bypass detected") end
+if not ttt then game.Players.LocalPlayer:Kick("Key bypass detected") end
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
@@ -549,3 +550,4 @@ task.spawn(function()
     until false
 end)
 -- yeah ok 
+enc)
