@@ -137,6 +137,7 @@ UIStroke_5.Parent = TextLabel_2
 	Submit.MouseButton1Click:Connect(function()
 		if Key.Text == "123.4" then
 		    getgenv().ama12ts = true
+		    wait(0.1)
                     keysys.Enabled = false
                     loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/Tabby/main/TabbyPassedKey.lua", true))()
 		    keysys:Destroy()
