@@ -233,7 +233,7 @@ AutoFarmSection:toggle({name = "Auto Farm Field",def = false,callback = function
     togglestore.AutoFarm = value
 end})
 
-AutoFarmSection:dropdown({name = "Convert Mode",def = "Walk", max = 2, options = {"Teleport", "Walk"},callback = function(chosen)
+AutoFarmSection:dropdown({name = "Convert Mode",def = "Walk", max = 2, options = {"Teleport ⚠️", "Walk"},callback = function(chosen)
     cstore.ConvertMethod = chosen
 end})
 
@@ -254,7 +254,7 @@ AutoFarmSection:toggle({name = "Collect Hidden Stickers",def = false,callback = 
     togglestore.CollectHiddenStickers = value
 end})
 
-MiscSection:button({name = "Get Collectibles",callback = function()
+MiscSection:button({name = "Get Collectibles [TP ⚠️⚠️]",callback = function()
     if not cstore.GettingRares then
         cstore.GettingRares = true
         for _, v in mapstore.Collectibles:GetChildren() do
@@ -268,7 +268,7 @@ MiscSection:button({name = "Get Collectibles",callback = function()
     end
 end})
 
-ToysSection:toggle({name = "Farm Snowflakes",def = false,callback = function(value)
+ToysSection:toggle({name = "Farm Snowflakes ⚠️",def = false,callback = function(value)
     togglestore.FarmSnowflakes = value
 end})
 
