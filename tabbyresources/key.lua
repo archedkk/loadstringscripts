@@ -129,13 +129,14 @@ UIStroke_2.Color = Color3.fromRGB(56, 56, 56)
 
 UIStroke_3.Parent = Submit
 
-UIStroke_4.Parent = Submit
+UIStroke_4.Pa4rent = Submit
 UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
 UIStroke_5.Parent = TextLabel_2
 
 	Submit.MouseButton1Click:Connect(function()
-		if Key.Text == "OCtJMbFu8sjUusoHgUSgB2Ho0cIjj1o0MMAtNs2hd5PYdty9VB" then
+		if Key.Text == "123.4" then
+		    getgenv().ama12ts = true
                     keysys.Enabled = false
                     loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/Tabby/main/TabbyPassedKey.lua", true))()
 		    keysys:Destroy()
