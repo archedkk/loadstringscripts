@@ -10,7 +10,7 @@
              \____/       \_/       \______|                            
                           
 ]]
-if not getgenv().am12ta then game.Players.LocalPlayer:Kick("nice try") end
+if not getgenv().ama12ts then game.Players.LocalPlayer:Kick("nice try") end
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
