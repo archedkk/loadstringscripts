@@ -234,7 +234,7 @@ AutoFarmSection:toggle({name = "Auto Farm Field",def = false,callback = function
     togglestore.AutoFarm = value
 end})
 
-AutoFarmSection:dropdown({name = "Convert Mode",def = "Walk", max = 2, options = {"Teleport ⚠️", "Walk"},callback = function(chosen)
+AutoFarmSection:dropdown({name = "Convert Mode",def = "Walk", max = 1, options = {"Walk"},callback = function(chosen)
     cstore.ConvertMethod = chosen
 end})
 
