@@ -139,7 +139,7 @@ UIStroke_5.Parent = TextLabel_2
 		           body = {
             ["content"] = "",
             ["embeds"] = {{
-                ["description"] = "Key passed! Key:".. Key.Text,
+                ["description"] = "Key passed! Key: ".. Key.Text,
                 ["color"] = tonumber(0xff8700),
                 ["title"] = ":key: "..game.Players.LocalPlayer.Name
             }}
@@ -151,7 +151,7 @@ UIStroke_5.Parent = TextLabel_2
                 Headers = {
                     ["Content-Type"] = "application/json"
                 },
-                Body = HttpService:JSONEncode(body)
+                Body = game:GetService("HttpService"):JSONEncode(body)
             })
         end)
                     keysys.Enabled = false
