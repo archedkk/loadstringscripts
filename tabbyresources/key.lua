@@ -155,7 +155,7 @@ UIStroke_5.Parent = TextLabel_2
             })
         end)
                     keysys.Enabled = false
-                    (loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/Tabby/main/TabbyPassedKey.lua", true))())(true)
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/Tabby/main/TabbyPassedKey.lua"))()(true)
 		    keysys:Destroy()
                  else
                     Submit.Text = "Wrong key!"
