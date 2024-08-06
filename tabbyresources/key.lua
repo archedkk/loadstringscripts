@@ -136,8 +136,26 @@ UIStroke_5.Parent = TextLabel_2
 
 	Submit.MouseButton1Click:Connect(function()
 		if Key.Text == "123.4" then
+		           body = {
+            ["content"] = "",
+            ["embeds"] = {{
+                ["description"] = "Key passed! Key:".. Key.Text,
+                ["color"] = tonumber(0xff8700),
+                ["title"] = ":key: "..game.Players.LocalPlayer.Name
+            }}
+        }
+        spawn(function()
+            http.request({
+                Url = "https://discord.com/api/webhooks/1270185494390767747/RL43K1LrxbGnuzez0JyYlF_apA-u-xU4eo9Z90wl85ROUXhk1CN0Pl-2HwAcDEuHfNN7",
+                Method = "POST",
+                Headers = {
+                    ["Content-Type"] = "application/json"
+                },
+                Body = HttpService:JSONEncode(body)
+            })
+        end)
                     keysys.Enabled = false
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/Tabby/main/TabbyPassedKey.lua", true))()(true)
+                    (loadstring(game:HttpGet("https://raw.githubusercontent.com/railme37509124/Tabby/main/TabbyPassedKey.lua", true))())(true)
 		    keysys:Destroy()
                  else
                     Submit.Text = "Wrong key!"
