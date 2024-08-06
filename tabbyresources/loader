@@ -351,8 +351,14 @@ FeedbackSection:button({name = "Send",callback = function()
     if not cstore.FeedBackDebounce then
         cstore.FeedBackDebounce = true
         functionstore.SendFeedback(cstore.CurrentFeedbackValue)
-        task.wait(3)
+        task.wait(600)
         cstore.FeedBackDebounce = false
+    else
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "spam detected"; 
+                Text = "also ur ip just got logged lmao";
+                Duration = 600;
+            })
     end
 end})
 
