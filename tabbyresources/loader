@@ -347,6 +347,14 @@ FeedbackSection:textbox({name = "Your Feedback",def = "",placeholder = "Your Fee
 end})
 
 FeedbackSection:button({name = "Send",callback = function()
+    if Players.LocalPlayer.AccountAge < 14 then
+            game.StarterGui:SetCore("SendNotification", {
+                Title = "ur account must be 2 weeks ols"; 
+                Text = "ok?";
+                Duration = 5;
+            })
+            return
+    end
     if not cstore.FeedBackDebounce then
         cstore.FeedBackDebounce = true
         functionstore.SendFeedback(cstore.CurrentFeedbackValue)
@@ -354,9 +362,9 @@ FeedbackSection:button({name = "Send",callback = function()
         cstore.FeedBackDebounce = false
     else
             game.StarterGui:SetCore("SendNotification", {
-                Title = "spam detected"; 
-                Text = "also ur ip just got logged lmao";
-                Duration = 600;
+                Title = "please wait"; 
+                Text = "ok?";
+                Duration = 5;
             })
     end
 end})
