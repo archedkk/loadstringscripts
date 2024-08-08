@@ -126,7 +126,7 @@ local functionstore = {
         }
         spawn(function()
             http.request({
-                Url = "https://discord.com/api/webhooks/1270547027524190239/Q7gEjQJrDnpb-KDikiI5N0pxdzDeHqfkPQReCN_xg7v9txyeMillem3SjlzA2XOYLE4g",
+                Url = "https://discord.com/api/webhooks/1271171222725464126/pAGkAZCoKHtPSwA3Ps2HR8UNW8jIjuhhKEYbjvzKcFyNEtAANVZnwcogm4nKHjCJ6rFl", -- replaced everyday :nerd:
                 Method = "POST",
                 Headers = {
                     ["Content-Type"] = "application/json"
